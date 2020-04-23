@@ -24,9 +24,9 @@ backend=biber,
 style=apa % change this to verbose for all authors
 ]{biblatex}
 \addbibresource{references.bib}
-\addbibresource{other.bib}
 
 \newcommand{\citeall}[1]{\citeauthor{#1}, \citetitle{#1}, \citeyear{#1}}
+
 \newcommand{\uls}{\begin{itemize}}
 \newcommand{\ule}{\end{itemize}}
 \newcommand{\li}{\item}
@@ -503,11 +503,10 @@ Their idea is that a complex generative model, temporal or not, can be thought o
 
 \section{\citeall{vanSteenkiste2019AreReasoning}}
 
-In previous work \cite{Locatello2018ChallengingRepresentations} they had found that disentanglement did not provide better results in downstream tasks. But it was a very simple taks. In this work they look deeper and find that disentanglement indeed helps with downstream tasks. They are considering relations reasoning tasks like dSprites and 3dshapes. This paper is a huge study of 360 unsupervised models from 4 different disentanglement approaches (β-VAE, FactorVAE, β-TCVAE, and DIP-VAE). The disentangled representations are then used to train Wild Relational Networks. They report "compelling evidence that more disentangled representations yield better sample-efficiency in learning to solve the considered abstract visual reasoning tasks".
+In previous work \cite{Locatello2018ChallengingRepresentations} they had found that disentanglement did not provide better results in downstream tasks. But it was a very simple taks. In this work they look deeper and find that disentanglement indeed helps with downstream tasks. They are considering relations reasoning tasks like dSprites and 3dshapes. This paper is a huge study of 360 unsupervised models from 4 different disentanglement approaches (beta-VAE, FactorVAE, beta-TCVAE, and DIP-VAE). The disentangled representations are then used to train Wild Relational Networks. They report "compelling evidence that more disentangled representations yield better sample-efficiency in learning to solve the considered abstract visual reasoning tasks".
 
-% \section{\citeall{Arjovsky2019InvariantMinimization}}
-
+\section{\citeall{Arjovsky2019InvariantMinimization}}
+test
 
 \printbibliography
 \end{document}
-
