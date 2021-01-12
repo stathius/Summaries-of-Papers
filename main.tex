@@ -45,8 +45,7 @@ style=apa % change this to verbose for all authors
 
 \section{\citeall{Lin2017WhyWell}}
    
-They draw a connection between probabilities and the Hamiltonian H of a system. In physics the H denotes the energy of a system and indicates how many configurations it can take. For example the probability can be written as:
-\begin{equation}
+while th\begin{equation}
 p(y | \mathbf{x})=\frac{1}{N(\mathbf{x})} e^{-\left[H_{y}(\mathbf{x})+\mu_{x}\right]}
 \end{equation}
 
@@ -501,12 +500,128 @@ In the probabilistic case, this means that the conditional distribution of each 
 
 Their idea is that a complex generative model, temporal or not, can be thought of as the composition of independent mechanisms or “causal” modules. They use multiple LSTMs each one with each own attention mechanism which they call Recurrent Independent Mechanisms. Since the queries depend on the state of the RIMs, this enables individual RIMs to attend only to the part of the input that is relevant for that particular RIM, thus enabling selective attention based on a top-down attention process. They promote the competition between RIMs for the final output by keeping the "highest rated" RIMs for each input. They also allow communication between RIMs by allowing the activated RIMs to read from all other RIMs (activated or not). The intuition behind this is that non-activated RIMs are not related to the current input, so their value should not change. However they may still store contextual information that is relevant for activated RIMs. 
 
-\section{\citeall{vanSteenkiste2019AreReasoning}}
+\section{\citeall{VanSteenkiste2019AreReasoning}}
 
 In previous work \cite{Locatello2018ChallengingRepresentations} they had found that disentanglement did not provide better results in downstream tasks. But it was a very simple taks. In this work they look deeper and find that disentanglement indeed helps with downstream tasks. They are considering relations reasoning tasks like dSprites and 3dshapes. This paper is a huge study of 360 unsupervised models from 4 different disentanglement approaches (beta-VAE, FactorVAE, beta-TCVAE, and DIP-VAE). The disentangled representations are then used to train Wild Relational Networks. They report "compelling evidence that more disentangled representations yield better sample-efficiency in learning to solve the considered abstract visual reasoning tasks".
 
 \section{\citeall{Arjovsky2019InvariantMinimization}}
-test
+
+Interesting experiment: split MNIST datasets in two, from 0-4 and 5-9. The labels have 25\% error so a perfect classifier can only be 75\% correct. Then we color both classes in different color (low numbers green, high numbers red). The color labels have also noise 0.1 or 0.2 (two "environments"). A normal classifier would take advantage of the color because the noise is less than the noise due to shape. But it would fail if during test the color noise is 0.9. A classifier that learns the invariant causes of the data i.e. the shapes would be more robust. Invariance across environements buys extrapolation powers. But this is not straightforward how to do it in realizable problems (that is when the noise in labels is small and the classifier can get close to optimal performance). 
+
+The statistical problem is a proxy of the real problem, there is a gap we haven't explored. Nature does not shuffle, by shuffling we remove useful information, mainly the info that is stable and invariant. When you are optimal for multiple environments and linear combinations of them then possibly you can extrapolate. Invariance is closely related to causation. Whithout noise it's trickier.
+
+Difference to domain adaptation. In DA you know the target domain and you also don't care about the output labels. DA is for covariate shift, ie diss of X and Y change together, in IRM distribution over X stays the same but changes for Y.
+
+\section{\citeall{Lu2019UnderstandingView}}
+Transformer as ODE Conv-Diff solver.
+
+\section{\citeall{Mooij2013FromCase}}
+
+The formulate structural equations where the derivatives of a variable depend on its parent variables in a structural causal model (SCM). This model also has corresponding equilibrium equations. They say that an SCM can model an ODE. But SCM there are no loops while in ODEs a derivative of a variable can depend on the value of the same variable. They say that the solution is implicit by the structural stability solutions:
+
+$$
+\begin{array}{l}\text { Note that even though the ODE may contain self- } \\ \text { loops (i.e., the time derivative } \dot{X}_{i} \text { could depend on } \\ X_{i} \text { itself, and hence } \left.i \in \operatorname{pa}_{\mathcal{D}}(i)\right), \text { the induced SCM } \\ \mathcal{M}_{\mathcal{E}_{\mathcal{D}}} \text { does not contain self-loops by construction (i.e., } \\ \left.i \notin \mathrm{pa}_{\mathcal{M} \varepsilon_{\mathcal{D}}}(i)\right) \text { . Somewhat surprisingly, the structural } \\ \text { stability conditions actually imply the existence of self- } \\ \text { loops (because if } X_{i} \text { would not occur in the equilibrium } \\ \text { equation }\left(\mathcal{E}_{\mathcal{D}}\right)_{i}, \text { its value would be undetermined and } \\ \text { hence the equilibrium would not be unique). }\end{array}
+$$
+
+\section{\citeall{Cranmer2020DiscoveringBiases}}
+
+They look into physical systems that can be modeled as interacting nodes. They use graph networks to learn to predict those systems and regularize the message passing between the nodes. In systems like moving particles they show that the most important messages element $\phi_1^e$ (after regularization) corresponds to (a linear combination) of the real forces. 
+
+They also use symbolic regression to predict $\phi_1^e$ from mass, positions of nodes, etc and are able to recover (not always) the underlying physical laws.
+
+
+\section{\citeall{Saemundsson2019VariationalEmbeddings}}
+
+The take the idea of Neural ODEs where neural networks are seen as discretized dynamical systems. They mix that with the viewpoint of geometric embeddings which impose structure on an embedding space. Instead of the Euler scheme and make use variational integrators, a class of discretization methods that respect and preserve the underlying geometry of a physical system.
+
+\section{\citeall{Greydanus2019HamiltonianNetworks}}
+
+They parametrize the Hamiltonian H of a system with a neural net. They use autograd and Hamilton's equations to predict the derivatives of the phase space:
+$$
+\frac{d \mathbf{q}}{d t}=\frac{\partial \mathcal{H}}{\partial \mathbf{p}}, \quad \frac{d \mathbf{p}}{d t}=-\frac{\partial \mathcal{H}}{\partial \mathbf{q}}
+$$
+
+Then they use an Euler integrator to find the next point in the phase space.
+
+\section{\citeall{Toth2019}}
+
+They use a network to deduct a latent space from pixel observations (multiple frames). They unroll this latent space to the future using the Hamiltonian equations. The latent space is not 2-dimensional (like the phase space) but higher. The motivation is that respecting the Hamiltonian in the latent space will preserve energy. They use a leapfrog (symplectic and energy preserving) integrator.
+
+\section{\citeall{Higgins2018TowardsRepresentations}}
+
+Still absorbing.
+
+They formulate the disentanglement of factors of variation in the generative process that creates the data. The formulation is based on group theory and the decomposition of group actions in subgroups. Interestingly the rotation around the cartesian axes can not be decomposed in subgroup actions. 
+
+"In machine perception, the most powerful generalisation we can hope for is by understanding what properties of the world remain the same when transformed in certain ways."
+
+\section{\citeall{Locatello2019DisentanglingLabels}}
+
+They study how some labels on the factors of variation can help with model selection and semi-supervised learning. In the case of SS learning they use the labels to learn the factors of variation in the latent space. They normalize them in [0,1] and also do some binning (need to read more on how to treat continuous factors).
+
+Some good pointers for other types of inductive biases for disentanglement such as:
+
+\begin{quote}
+Other forms of inductive biases such as relying on temporal information (video data) (Denton and Birodkar, 2017; Yingzhen & Mandt, 2018), allowing for interaction with the environment (Thomas et al., 2017), or incorporating grouping information (Kulkarni et al., 2015; Bouchacourt et al., 2018) were discussed in the literature as candidates to circumvent the impossibility result by Locatello et al. (2019b)
+\end{quote}
+
+
+\section{\citeall{Locatello2018ChallengingRepresentations}}
+
+They say that disentanglement cannot be achieved without inductive biases in the model or the data (labels). They provide some concise description of disentanglement metrics in the appendix.
+
+\section{\citeall{Miladinovic2019DisentangledRepresentations}}
+
+They want to solve the problem of different dynamics in ODEs and in general (similar to ours). 
+$$
+P^{D_{k}}\left(X_{i} \mid \vec{X}_{<i}\right) \neq P^{D_{m}}\left(X_{i} \mid \vec{X}_{<i}\right), for k \neq m
+$$
+
+The formulation for the model is a bayesian DGM as a state-space model. Where the dynamics D are inferred prior to the sequence prediction (and affect all steps of the prediction). The idea in SSMs is that the next prediction is found by unrolling the state-space and decoding it. The also model noise in the latent space unrolling and the reconstruction/decoding.
+
+\includegraphics[width=0.8\textwidth]{images/dssm.png}
+
+\includegraphics[width=0.8\textwidth]{images/dssm2.png}
+
+\section{\citeall{LeGuen2020DisentanglingPrediction}}
+
+They disentangle the dynamics (movement) from the details (texture, appearance). The PhyCell models the physics and the ConvLSTM the details. PhyCell has a predictor and correction scheme (similar to DSSM that models noise). The predictor is based on convolutions that combine spatial derivatives. 
+
+\includegraphics[width=0.8\textwidth]{images/phydnet.png}
+
+\section{\citeall{Linial2020GenerativeUnknowns}}
+
+Similar formulation like DSSM \cite{Miladinovic2019DisentangledRepresentations}. They use an ODE solver to propagate the state-space. Since this needs to be differentiable they use the RK4 from NeuralODE \cite{Chen2018NeuralEquations}. They also use "grounding" i.e. they use ground truth state-space to inform the latent space but only with low number of "labels" like 1 or 5 pc. Similar to what I want to do with length but they do it with the state space.
+
+\includegraphics[width=0.8\textwidth]{images/goku.png}
+
+
+\section{\citeall{Sun2019Test-TimeShifts}}
+
+The idea is to use an auxiliary *unsupervised* loss to fine tune the model both during training and testing. For image classification such loss could be something as trivial as predicting rotation. The loss is not exactly *unsupervised* in the sense that we do have labels for it, but these are very cheap to generate. In physical systems that could be coming from domain knowledge e.g. energy conservation.
+
+The network has two components. The first one is a shared component, we can think of it as a feature extrator. On top of this extractor there are two heads, one for the supervised and another for the unsupervised tasks. In previous work, the unsupervised loss was used in training only \cite{Hendrycks2019BenchmarkingPerturbations} and has showed that it increases the robustness in the main task, but this work also uses it to update the weights at training time before making a prediction. This work also makes another assumption that in test time the samples come from the same distribution. So in this case the keep the updates on the weights for each test sample (they call this online). 
+
+This paper has a very good literature review for 
+\uls
+\li \textbf{Learning on test instances. }
+``Shocher et al. (2018) pro- vide a key inspiration for our work by showing that image super-resolution could be learned at test time simply by trying to upsample a downsampled version of the input image. More recently Bau et al. (2019) improve photo manipula- tion by adapting a pre-trained GAN to the statistics of the input image.``
+\li \textbf{Self-supervised learning} studies how to create labels from the data, by designing various pretext tasks that can learn semantic information without human annotations. E.g. predicting rotation, context, colorization etc.
+\li \textbf{Non-adversarial robustness} studies the effect of corruptions, perturbations, out-of-distribution examples, and real- world distribution shifts \cite{Hendrycks2019BenchmarkingPerturbations}.
+
+\li \textbf{Unsupervised domain adaptation (transfer learning)} studies the problem of distribution shifts, when an unlabeled dataset from the test distribution (target domain) is available at training time, in addition to a labeled dataset from the training distribution (source domain). The limitation of the problem setting, however, is that generalization might only be improved for this specific test distribution, which can be difficult to anticipate in advance.
+
+\li\textbf{ Domain generalization} studies the setting where a meta distribution generates multiple environment distributions, some of which are available during training (source), while others are used for testing (target). With only a few environments, information on the meta distribution is often too scarce to be helpful, and with many environments, we are back to the i.i.d. setting where each environment can be seen as a sample, and a strong baseline is to simply train on all the environments.
+
+\li \textbf{One (few)-shot learning} tudies how to learn a new task or a new classification category using only one (or a few) sample(s), on top of a general representation that has been learned on diverse samples.
+\li \textbf{Continual learning} Continual learning (a.k.a. learning without forgetting) studies the setting where a model is made to learn a sequence of tasks, and not forget about the earlier ones while training for the later
+\li \textbf{Online learning}. The basic setting repeats the following: receive xt, predict yˆt, receive yt from a worst-case oracle, and learn. Final performance is evaluated using the regret, which colloquially translates to how much worse the online learning algorithm performs in comparison to the best fixed model in hindsight.
+\ule 
+
+\section{\citeall{Alet2020Tailoring:Time}}
+
+The extend the idea of test-time training from \cite{Sun2019Test-TimeShifts}, which they call tailoring. Furthermore they use meta-learning in the sense that during training they learn a model that will behave well on test-time with tailoring.
+
 
 \printbibliography
 \end{document}
