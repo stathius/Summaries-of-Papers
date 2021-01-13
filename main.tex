@@ -383,10 +383,6 @@ The adjoint is:
 \begin{array}{l}\lambda=\left(\frac{\partial F(u, m)}{\partial u}\right)^{-*} \frac{\partial J^{*}}{\partial u} \\ \left(\frac{\partial F(u, m)}{\partial u}\right)^{*} \lambda=\frac{\partial J^{*}}{\partial u}\end{array}
 \end{equation}
 
-% or 
-% $$
-% \frac{\partial J}{\partial m} = \lambda^T \frac{\partial F(u, m)}{\partial m})
-% $$
 
 \section{IPAM - Improving PDE solvers and PDE-constrained optimization with deep learning and differentiable programming}
 
@@ -457,7 +453,7 @@ Where k is the dimension of the embedding. We can also have multi head attention
 \begin{array}{l}\qquad \begin{aligned} \text { MultiHead }(Q, K, V) &\left.=\text { Concat (head }_{1}, \ldots, \text { head }_{\mathbf{h}}\right) W^{O} \\ \text { where head }_{\mathbf{i}} &=\text { Attention }\left(Q W_{i}^{Q}, K W_{i}^{K}, V W_{i}^{V}\right) \end{aligned} \end{array}
 \end{equation}
 
- \text { Where the projections are parameter matrices } W_{i}^{Q} \in \mathbb{R}^{d_{\text {model }} \times d_{k}}, W_{i}^{K} \in \mathbb{R}^{d_{\text {model }} \times d_{k}}, W_{i}^{V} \in \mathbb{R}^{d_{\text {model }} \times d_{v}} \\ \text { and } W^{O} \in \mathbb{R}^{h d_{v} \times d_{\text {model }}}.  
+ % \text { Where the projections are parameter matrices } W_{i}^{Q} \in \mathbb{R}^{d_{\text {model }} \times d_{k}}, W_{i}^{K} \in \mathbb{R}^{d_{\text {model }} \times d_{k}}, W_{i}^{V} \in \mathbb{R}^{d_{\text {model }} \times d_{v}} \\ \text { and } W^{O} \in \mathbb{R}^{h d_{v} \times d_{\text {model }}}.  
  The $W^0$ does the final aggregation of the heads, see figure below.
 
 \includegraphics[width=0.8\textwidth]{images/attention.png}
