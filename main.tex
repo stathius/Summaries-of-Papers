@@ -25,7 +25,7 @@ style=apa % change this to verbose for all authors
 ]{biblatex}
 \addbibresource{references.bib}
 
-\newcommand{\citeall}[1]{\citeauthor{#1}, \citetitle{#1}, \citeyear{#1}}
+\newcommand{\citeall}[1]{\citeauthor{#1}}
 
 \newcommand{\uls}{\begin{itemize}}
 \newcommand{\ule}{\end{itemize}}
@@ -43,8 +43,11 @@ style=apa % change this to verbose for all authors
 \tableofcontents
 \newpage
 
-\section{\citeall{Lin2017WhyWell}}
-   
+\section{\cite{Lin2017WhyWell}}
+
+\cite{Lin2017WhyWell}
+\autocite{Lin2017WhyWell}
+
 while th\begin{equation}
 p(y | \mathbf{x})=\frac{1}{N(\mathbf{x})} e^{-\left[H_{y}(\mathbf{x})+\mu_{x}\right]}
 \end{equation}

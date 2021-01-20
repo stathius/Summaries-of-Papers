@@ -1,13 +1,6 @@
----
-author:
-- Stathi Fotiadis
-bibliography:
-- references.bib
-date: February 2020
-title: Summaries of Papers
----
+# (Lin, Tegmark, and Rolnick 2017) {#section}
 
-# @Lin2017WhyWell, , [-@Lin2017WhyWell]
+(Lin, Tegmark, and Rolnick 2017) (Lin, Tegmark, and Rolnick 2017)
 
 while
 th<p align="center"><img alt="$$p(y | \mathbf{x})=\frac{1}{N(\mathbf{x})} e^{-\left[H_{y}(\mathbf{x})+\mu_{x}\right]}$$" src="svgs/93320dd55a7eacb54d53a3a1f6d67f02.png" align="middle" width="194.67569385pt" height="37.099754999999995pt"/></p>
@@ -35,7 +28,7 @@ polynomial Hamiltonians and deep learning approximates well polynomials
 then this is why it works well for data that come from the physical
 world.
 
-# @Raissi2019Physics-informedEquations, , [-@Raissi2019Physics-informedEquations]
+# Raissi, Perdikaris, and Karniadakis (2019) {#section-1}
 
 They use neural networks for approximating continuous and discrete-time
 PDEs. I am mainly interested in the discrete-time case.
@@ -49,7 +42,7 @@ they construct the whole PDE. They only using training data from a point
 fixed in time. Learning is possible because the loss function and the
 embedded structure is constraining the solution space.
 
-# @Lample2017FaderAttributes, , [-@Lample2017FaderAttributes]
+# Lample et al. (2017) {#section-2}
 
 They train a encoder-decoder network so that the latent space is unaware
 of specific image attributes. Along with the with the decoder there is a
@@ -64,7 +57,7 @@ observed by the authors.
 
 ![image](images/fader-net.png){width="90%"}
 
-# @Rezende2015VariationalFlows, , [-@Rezende2015VariationalFlows]
+# Rezende and Mohamed (2015) {#section-3}
 
 [IPAM Lecture
 Video](http://www.ipam.ucla.edu/abstract/?tid=16242&pcode=MLPWS1
@@ -85,14 +78,14 @@ The transformations must be invertible (bijective) for the sampling to
 work. To make the calculation of the determinant tractable they enforce
 triangular Jacobians.
 
-# @Chen2018NeuralEquations, , [-@Chen2018NeuralEquations]
+# Chen et al. (2018) {#section-4}
 
 Ruthoto: the selling point of Neural ODEs is that you don't need to
 store anything in memory because during the backward pass you can
 integrate backwards in time. But in his lecture he showed that the
-backward integration does introduce errors [@Ruthotto2019DeepEquations].
+backward integration does introduce errors (Ruthotto and Haber 2019).
 
-# @Yldz2019ODE2VAE:Networks, , [-@Yldz2019ODE2VAE:Networks]
+# Yıldız, Heinonen, and Lähdesmäki (2019) {#section-5}
 
 Its an extension of VAE. The VAE encodes and decodes the latent space.
 The Neural ODEs are used to \"propagate\" this latent space
@@ -152,8 +145,8 @@ How and why physics can be imbued in neural network models.
 Video](http://www.ipam.ucla.edu/programs/workshops/workshop-i-from-passive-to-active-generative-and-reinforcement-learning-with-physics/?tab=schedule)
 by Frank Noe, Freie University of Berlin
 
-An application of normalizing flows [@Rezende2015VariationalFlows] and
-Real NVP [@Dinh2016DensityNVP] in statistical physics.
+An application of normalizing flows (Rezende and Mohamed 2015) and Real
+NVP (Dinh, Sohl-Dickstein, and Bengio 2016) in statistical physics.
 
 # IPAM - Deep Generative Networks as Inverse Generators, Stephane Mallat
 
@@ -201,8 +194,8 @@ underdetermined.
 video](http://www.ipam.ucla.edu/abstract/?tid=16362&pcode=MLPWS1)
 
 ANODE paper Gholami et al 2019 exposes the challenges with Neural ODEs
-[@Chen2018NeuralEquations]. Hamiltonian NN [@Ruthotto2019DeepEquations]:
-You can get from input space to latent space and back,
+(Chen et al. 2018). Hamiltonian NN (Ruthotto and Haber 2019): You can
+get from input space to latent space and back,
 <img alt="$X\rightarrow Z \rightarrow X$" src="svgs/448b908dbee3428b47b4571075ad1a39.png" align="middle" width="93.35582519999998pt" height="22.465723500000017pt"/>, without loss. Related to Reversible Net.
 
 Two ways to do optimal control.
@@ -285,7 +278,7 @@ taken into account.
 -   Alternatives like Gaussian smoothing not necessarily better than
     pre-designed sampling
 
-# @Cranmer2019LearningNetworks, , [-@Cranmer2019LearningNetworks]
+# M. Cranmer et al. (2019) {#section-6}
 
 [NeurIPS ML4S
 video](https://slideslive.com/38922576/learning-symbolic-physics-with-graph-networks)
@@ -311,7 +304,7 @@ error goes up (like the elbow method).
 They also found that lower dimensional messages generalize better to
 different number of bodies.
 
-# @Cranmer2019TheInference, , [-@Cranmer2019TheInference]
+# K. Cranmer, Brehmer, and Louppe (2019) {#section-7}
 
 [Link to video](https://www.youtube.com/watch?v=odAQlcf5Urc)
 
@@ -352,7 +345,7 @@ Talks a lot about normalizing flows and similar models.
 
 **REVISE AGAIN LATER**
 
-# @Both2019DeepMoD:Data, , [-@Both2019DeepMoD:Data]
+# Both et al. (2019) {#section-8}
 
 [Link to video](https://www.youtube.com/watch?v=Ml4EXS_MUBc)
 
@@ -372,9 +365,9 @@ L1 regularization promotes sparsity in the coefficients.
 ![image](images/deepmod.png){width="90%"}
 
 They also have another paper named Temporal Normalizing Flows that does
-the system identification in PDEs [@Both2019TemporalFlows].
+the system identification in PDEs (Both and Kusters 2019).
 
-# @Rezende2019EquivariantFlows, , [-@Rezende2019EquivariantFlows]
+# Rezende et al. (2019) {#section-9}
 
 [Link to video 1](http://youtube.com/watch?v=8VV0kL7Qg3Y)
 
@@ -405,7 +398,7 @@ p as latent. These variables has to be marginalized, as in Hamiltonian
 MC. To do that they use a variational approximation and optimize for
 VLB.
 
-# @Sanchez-Gonzalez2019HamiltonianIntegrators, , [-@Sanchez-Gonzalez2019HamiltonianIntegrators]
+# Sanchez-Gonzalez et al. (2019) {#section-10}
 
 [Link to
 video](http://www.ipam.ucla.edu/abstract/?tid=16226&pcode=MLPWS2)
@@ -429,7 +422,7 @@ with the input.
 
 ![image](images/hamgraph.png){width="90%"}
 
-# @Sanchez-Gonzalez2018GraphControl, , [-@Sanchez-Gonzalez2018GraphControl]
+# Sanchez-Gonzalez et al. (2018) {#section-11}
 
 Interesting things about poking the system to infer latent variables
 with physical meaning like mass etc. These can be later used for
@@ -457,34 +450,34 @@ video](http://www.ipam.ucla.edu/abstract/?tid=16191)
 They combine simulators with probabilistic programming for inverse
 problems.
 
-# @Shanahan2019AnArchitecture, , [-@Shanahan2019AnArchitecture]
+# Shanahan et al. (2019) {#section-12}
 
 The use attention to extract \"points of interest\" from an image and
 then learn the relations of those points. The architecture is similar to
-Multi Head Attention [@Vaswani2017AttentionNeed] and close to a previous
-paper in Deep RL. They find that training on a relational task and then
-freeze the network helps with learning a new task (they only train the
-last part of the net). The attention learns to focus on the objects
-mostly. Also the representation they learn captures meaningful
-properties of the objects (after PCA), ie distinguishes between color &
-shape. Lastly their network can output symbolic propositions, prolog
-style, and these propositions can be queried from symbolic programming
-(prolog), although what these propositions mean is unclear.
+Multi Head Attention (Vaswani et al. 2017) and close to a previous paper
+in Deep RL. They find that training on a relational task and then freeze
+the network helps with learning a new task (they only train the last
+part of the net). The attention learns to focus on the objects mostly.
+Also the representation they learn captures meaningful properties of the
+objects (after PCA), ie distinguishes between color & shape. Lastly
+their network can output symbolic propositions, prolog style, and these
+propositions can be queried from symbolic programming (prolog), although
+what these propositions mean is unclear.
 
 This work is related to graph networks but there we have the objects
 identified from a previous task, or they are given. This method
 identifies its own \"objects\" with attention. Also the work is relevant
 to symbolic/relational reasoning and AI.
 
-Related review paper is [@Garnelo2019ReconcilingRelations]: *\"In sum,
-there is a spectrum of approaches to compositionality, ranging from
-methods that engineer compositional structure directly into the
-representations to meth- ods that allow compositionality to emerge from
-the learning process in response to compositional structure in the data.
-Mid-way along this spectrum we find recent work on autoencoders whose
-loss functions promote com- positional representation.\"*
+Related review paper is (Garnelo and Shanahan 2019): *\"In sum, there is
+a spectrum of approaches to compositionality, ranging from methods that
+engineer compositional structure directly into the representations to
+meth- ods that allow compositionality to emerge from the learning
+process in response to compositional structure in the data. Mid-way
+along this spectrum we find recent work on autoencoders whose loss
+functions promote com- positional representation.\"*
 
-# @Brunton2016DiscoveringSystems, , [-@Brunton2016DiscoveringSystems]
+# Brunton et al. (2016) {#section-13}
 
 [IPAM WS2
 video](http://www.ipam.ucla.edu/abstract/?tid=15783&pcode=MLPWS2)
@@ -568,7 +561,7 @@ physical laws. Adding the physical laws can help with interpretability
 and generalization. By differential programming he means machine
 learning (auto-grad). They present two methods:
 
-## @Bar-Sinai2019LearningEquations, , [-@Bar-Sinai2019LearningEquations]
+## Bar-Sinai et al. (2019) {#section-14}
 
 This paper uses ML to find what discretization to use for solving PDEs.
 e.g. what coefficients to use in central approximation of derivatives:
@@ -576,13 +569,13 @@ e.g. what coefficients to use in central approximation of derivatives:
 
 ## Hoyer et al. Neural reparametrerization improves structural optimization.
 
-Deep Image Prior [@Lempitsky2018DeepPrior]: train a CNN to reconstruct
-just one image and this produce a super-resolution image. The idea is
-that the only optimize one example and for a limited amount of
-iterations. This for some reason works well for reconstructing the
+Deep Image Prior (**Lempitsky2018DeepPrior?**): train a CNN to
+reconstruct just one image and this produce a super-resolution image.
+The idea is that the only optimize one example and for a limited amount
+of iterations. This for some reason works well for reconstructing the
 details. They use a similar approach.
 
-# @Lempitsky2018DeepPrior, , [-@Lempitsky2018DeepPrior]
+# (**Lempitsky2018DeepPrior?**) {#section-15}
 
 [Medium
 article](https://medium.com/@ahmdtaha/deep-image-prior-7e0eac506dee)
@@ -624,7 +617,7 @@ methods tried to find heuristics on that (check link 1 above). This
 paper indicates that the structure of the CNN is a good prior for images
 by itself.
 
-# @Bengio2019AMechanisms, , [-@Bengio2019AMechanisms]
+# Bengio et al. (2019) {#section-16}
 
 The authors define \"a meta-learning objective that measures the speed
 of adaptation, i.e., a form of regret, in order to optimize the way in
@@ -660,7 +653,7 @@ how fast a network meta-learns. They show that this indicates the
 correct model, opening the avenue to learn a causal model from the data
 directly, in this simple scenario.
 
-# @Vaswani2017AttentionNeed, , [-@Vaswani2017AttentionNeed]
+# Vaswani et al. (2017) {#section-17}
 
 [Link to article](http://www.peterbloem.nl/blog/transformers)
 
@@ -705,7 +698,7 @@ Basic intuitions:
     don't need repeated layers that use stride/downsampling that dilutes
     the signal
 
-# @Scholkopf2019CausalityLearning, , [-@Scholkopf2019CausalityLearning]
+# Schölkopf (2019) {#section-18}
 
 He makes the point between statistical and causal dependence, which is
 the analogous of correlation is not causation. Argues that causality is
@@ -747,17 +740,16 @@ called invariance.
 similar to how the noise is treated in VAEs, both use the
 reparametrization trick. Various directions. *Learning transferable
 mechanisms:* the world is modular we can learn independent causal
-mechanisms. This can be done with competitive training
-[@Goyal2019RecurrentMechanisms]. *Learning disentangled
-representations:* Intervening upon latent variables. One way to
-intervene is to replace noise variables with the corresponding values
-computed from other input images, a procedure that has been referred to
-as hybridization by Besserve et al. (2018b). *Learning interventional
-world models and reasoning* Causality will play a role in representation
-learning and maybe self-consiousness might need to be represented in the
-latent variables.
+mechanisms. This can be done with competitive training (Goyal et al.
+2019). *Learning disentangled representations:* Intervening upon latent
+variables. One way to intervene is to replace noise variables with the
+corresponding values computed from other input images, a procedure that
+has been referred to as hybridization by Besserve et al. (2018b).
+*Learning interventional world models and reasoning* Causality will play
+a role in representation learning and maybe self-consiousness might need
+to be represented in the latent variables.
 
-# @Goyal2019RecurrentMechanisms, , [-@Goyal2019RecurrentMechanisms]
+# Goyal et al. (2019) {#section-19}
 
 Their idea is that a complex generative model, temporal or not, can be
 thought of as the composition of independent mechanisms or "causal"
@@ -774,21 +766,21 @@ is that non-activated RIMs are not related to the current input, so
 their value should not change. However they may still store contextual
 information that is relevant for activated RIMs.
 
-# @VanSteenkiste2019AreReasoning, , [-@VanSteenkiste2019AreReasoning]
+# Van Steenkiste et al. (2019) {#section-20}
 
-In previous work [@Locatello2018ChallengingRepresentations] they had
-found that disentanglement did not provide better results in downstream
-tasks. But it was a very simple taks. In this work they look deeper and
-find that disentanglement indeed helps with downstream tasks. They are
-considering relations reasoning tasks like dSprites and 3dshapes. This
-paper is a huge study of 360 unsupervised models from 4 different
-disentanglement approaches (beta-VAE, FactorVAE, beta-TCVAE, and
-DIP-VAE). The disentangled representations are then used to train Wild
-Relational Networks. They report \"compelling evidence that more
-disentangled representations yield better sample-efficiency in learning
-to solve the considered abstract visual reasoning tasks\".
+In previous work (Locatello et al. 2018) they had found that
+disentanglement did not provide better results in downstream tasks. But
+it was a very simple taks. In this work they look deeper and find that
+disentanglement indeed helps with downstream tasks. They are considering
+relations reasoning tasks like dSprites and 3dshapes. This paper is a
+huge study of 360 unsupervised models from 4 different disentanglement
+approaches (beta-VAE, FactorVAE, beta-TCVAE, and DIP-VAE). The
+disentangled representations are then used to train Wild Relational
+Networks. They report \"compelling evidence that more disentangled
+representations yield better sample-efficiency in learning to solve the
+considered abstract visual reasoning tasks\".
 
-# @Arjovsky2019InvariantMinimization, , [-@Arjovsky2019InvariantMinimization]
+# Arjovsky et al. (2019) {#section-21}
 
 Interesting experiment: split MNIST datasets in two, from 0-4 and 5-9.
 The labels have 25% error so a perfect classifier can only be 75%
@@ -815,11 +807,11 @@ you also don't care about the output labels. DA is for covariate shift,
 ie diss of X and Y change together, in IRM distribution over X stays the
 same but changes for Y.
 
-# @Lu2019UnderstandingView, , [-@Lu2019UnderstandingView]
+# Lu et al. (2019) {#section-22}
 
 Transformer as ODE Conv-Diff solver.
 
-# @Mooij2013FromCase, , [-@Mooij2013FromCase]
+# Mooij, Janzing, and Schölkopf (2013) {#section-23}
 
 The formulate structural equations where the derivatives of a variable
 depend on its parent variables in a structural causal model (SCM). This
@@ -830,7 +822,7 @@ that the solution is implicit by the structural stability solutions:
 
 <p align="center"><img alt="$$\begin{array}{l}\text { Note that even though the ODE may contain self- } \\ \text { loops (i.e., the time derivative } \dot{X}_{i} \text { could depend on } \\ X_{i} \text { itself, and hence } \left.i \in \operatorname{pa}_{\mathcal{D}}(i)\right), \text { the induced SCM } \\ \mathcal{M}_{\mathcal{E}_{\mathcal{D}}} \text { does not contain self-loops by construction (i.e., } \\ \left.i \notin \mathrm{pa}_{\mathcal{M} \varepsilon_{\mathcal{D}}}(i)\right) \text { . Somewhat surprisingly, the structural } \\ \text { stability conditions actually imply the existence of self- } \\ \text { loops (because if } X_{i} \text { would not occur in the equilibrium } \\ \text { equation }\left(\mathcal{E}_{\mathcal{D}}\right)_{i}, \text { its value would be undetermined and } \\ \text { hence the equilibrium would not be unique). }\end{array}$$" src="svgs/7ddd8e94cec3d3a87a6492598adf84a4.png" align="middle" width="405.66774929999997pt" height="174.82343834999998pt"/></p>
 
-# @Cranmer2020DiscoveringBiases, , [-@Cranmer2020DiscoveringBiases]
+# M. Cranmer et al. (2020) {#section-24}
 
 They look into physical systems that can be modeled as interacting
 nodes. They use graph networks to learn to predict those systems and
@@ -843,7 +835,7 @@ They also use symbolic regression to predict <img alt="$\phi_1^e$" src="svgs/b6e
 positions of nodes, etc and are able to recover (not always) the
 underlying physical laws.
 
-# @Saemundsson2019VariationalEmbeddings, , [-@Saemundsson2019VariationalEmbeddings]
+# Saemundsson et al. (2019) {#section-25}
 
 The take the idea of Neural ODEs where neural networks are seen as
 discretized dynamical systems. They mix that with the viewpoint of
@@ -852,7 +844,7 @@ Instead of the Euler scheme and make use variational integrators, a
 class of discretization methods that respect and preserve the underlying
 geometry of a physical system.
 
-# @Greydanus2019HamiltonianNetworks, , [-@Greydanus2019HamiltonianNetworks]
+# Greydanus, Dzamba, and Yosinski (2019) {#section-26}
 
 They parametrize the Hamiltonian H of a system with a neural net. They
 use autograd and Hamilton's equations to predict the derivatives of the
@@ -862,7 +854,7 @@ phase space:
 Then they use an Euler integrator to find the next point in the phase
 space.
 
-# @Toth2019, , [-@Toth2019]
+# Toth et al. (2019) {#section-27}
 
 They use a network to deduct a latent space from pixel observations
 (multiple frames). They unroll this latent space to the future using the
@@ -871,7 +863,7 @@ phase space) but higher. The motivation is that respecting the
 Hamiltonian in the latent space will preserve energy. They use a
 leapfrog (symplectic and energy preserving) integrator.
 
-# @Higgins2018TowardsRepresentations, , [-@Higgins2018TowardsRepresentations]
+# Higgins et al. (2018) {#section-28}
 
 Still absorbing.
 
@@ -885,7 +877,7 @@ decomposed in subgroup actions.
 for is by understanding what properties of the world remain the same
 when transformed in certain ways.\"
 
-# @Locatello2019DisentanglingLabels, , [-@Locatello2019DisentanglingLabels]
+# Locatello et al. (2019) {#section-29}
 
 They study how some labels on the factors of variation can help with
 model selection and semi-supervised learning. In the case of SS learning
@@ -904,13 +896,13 @@ disentanglement such as:
 > candidates to circumvent the impossibility result by Locatello et al.
 > (2019b)
 
-# @Locatello2018ChallengingRepresentations, , [-@Locatello2018ChallengingRepresentations]
+# Locatello et al. (2018) {#section-30}
 
 They say that disentanglement cannot be achieved without inductive
 biases in the model or the data (labels). They provide some concise
 description of disentanglement metrics in the appendix.
 
-# @Miladinovic2019DisentangledRepresentations, , [-@Miladinovic2019DisentangledRepresentations]
+# Miladinović et al. (2019) {#section-31}
 
 They want to solve the problem of different dynamics in ODEs and in
 general (similar to ours).
@@ -927,7 +919,7 @@ reconstruction/decoding.
 
 ![image](images/dssm2.png){width="80%"}
 
-# @LeGuen2020DisentanglingPrediction, , [-@LeGuen2020DisentanglingPrediction]
+# Le Guen and Thome (2020) {#section-32}
 
 They disentangle the dynamics (movement) from the details (texture,
 appearance). The PhyCell models the physics and the ConvLSTM the
@@ -937,20 +929,19 @@ spatial derivatives.
 
 ![image](images/phydnet.png){width="80%"}
 
-# @Linial2020GenerativeUnknowns, , [-@Linial2020GenerativeUnknowns]
+# Linial, Eytan, and Shalit (2020) {#section-33}
 
-Similar formulation like DSSM
-[@Miladinovic2019DisentangledRepresentations]. They use an ODE solver to
-propagate the state-space. Since this needs to be differentiable they
-use the RK4 from NeuralODE [@Chen2018NeuralEquations]. They also use
-\"grounding\" i.e. they use ground truth state-space to inform the
-latent space but only with low number of \"labels\" like 1 or 5 pc.
+Similar formulation like DSSM (Miladinović et al. 2019). They use an ODE
+solver to propagate the state-space. Since this needs to be
+differentiable they use the RK4 from NeuralODE (Chen et al. 2018). They
+also use \"grounding\" i.e. they use ground truth state-space to inform
+the latent space but only with low number of \"labels\" like 1 or 5 pc.
 Similar to what I want to do with length but they do it with the state
 space.
 
 ![image](images/goku.png){width="80%"}
 
-# @Sun2019Test-TimeShifts, , [-@Sun2019Test-TimeShifts]
+# Sun et al. (2019) {#section-34}
 
 The idea is to use an auxiliary \*unsupervised\* loss to fine tune the
 model both during training and testing. For image classification such
@@ -963,12 +954,12 @@ The network has two components. The first one is a shared component, we
 can think of it as a feature extrator. On top of this extractor there
 are two heads, one for the supervised and another for the unsupervised
 tasks. In previous work, the unsupervised loss was used in training only
-[@Hendrycks2019BenchmarkingPerturbations] and has showed that it
-increases the robustness in the main task, but this work also uses it to
-update the weights at training time before making a prediction. This
-work also makes another assumption that in test time the samples come
-from the same distribution. So in this case the keep the updates on the
-weights for each test sample (they call this online).
+(Hendrycks and Dietterich 2019) and has showed that it increases the
+robustness in the main task, but this work also uses it to update the
+weights at training time before making a prediction. This work also
+makes another assumption that in test time the samples come from the
+same distribution. So in this case the keep the updates on the weights
+for each test sample (they call this online).
 
 This paper has a very good literature review for
 
@@ -986,7 +977,7 @@ This paper has a very good literature review for
 
 -   **Non-adversarial robustness** studies the effect of corruptions,
     perturbations, out-of-distribution examples, and real- world
-    distribution shifts [@Hendrycks2019BenchmarkingPerturbations].
+    distribution shifts (Hendrycks and Dietterich 2019).
 
 -   **Unsupervised domain adaptation (transfer learning)** studies the
     problem of distribution shifts, when an unlabeled dataset from the
@@ -1022,9 +1013,277 @@ This paper has a very good literature review for
     algorithm performs in comparison to the best fixed model in
     hindsight.
 
-# @Alet2020Tailoring:Time, , [-@Alet2020Tailoring:Time]
+# Alet et al. (2020) {#section-35}
 
-The extend the idea of test-time training from
-[@Sun2019Test-TimeShifts], which they call tailoring. Furthermore they
-use meta-learning in the sense that during training they learn a model
-that will behave well on test-time with tailoring.
+The extend the idea of test-time training from (Sun et al. 2019), which
+they call tailoring. Furthermore they use meta-learning in the sense
+that during training they learn a model that will behave well on
+test-time with tailoring.
+
+::: {#refs .references .csl-bib-body .hanging-indent}
+::: {#ref-Alet2020Tailoring:Time .csl-entry}
+Alet, Ferran, Kenji Kawaguchi, Maria Bauza, Nurullah Giray Kuru, Tomas
+Lozano-Perez, and Leslie Pack Kaelbling. 2020. "[Tailoring: encoding
+inductive biases by optimizing unsupervised objectives at prediction
+time]{.nocase}," September. <http://arxiv.org/abs/2009.10623>.
+:::
+
+::: {#ref-Arjovsky2019InvariantMinimization .csl-entry}
+Arjovsky, Martin, Léon Bottou, Ishaan Gulrajani, and David Lopez-Paz.
+2019. "Invariant Risk Minimization," July, 1--30.
+<http://arxiv.org/abs/1907.02893>.
+:::
+
+::: {#ref-Bar-Sinai2019LearningEquations .csl-entry}
+Bar-Sinai, Yohai, Stephan Hoyer, Jason Hickey, and Michael P. Brenner.
+2019. "[Learning data-driven discretizations for partial differential
+equations]{.nocase}." *Proceedings of the National Academy of Sciences
+of the United States of America* 116 (31): 15344--49.
+<https://doi.org/10.1073/pnas.1814058116>.
+:::
+
+::: {#ref-Bengio2019AMechanisms .csl-entry}
+Bengio, Yoshua, Tristan Deleu, Nasim Rahaman, Rosemary Ke, Sébastien
+Lachapelle, Olexa Bilaniuk, Anirudh Goyal, and Christopher Pal. 2019.
+"[A Meta-Transfer Objective for Learning to Disentangle Causal
+Mechanisms]{.nocase}," January. <http://arxiv.org/abs/1901.10912>.
+:::
+
+::: {#ref-Both2019DeepMoD:Data .csl-entry}
+Both, Gert-Jan, Subham Choudhury, Pierre Sens, and Remy Kusters. 2019.
+"[DeepMoD: Deep learning for Model Discovery in noisy data]{.nocase},"
+April. <http://arxiv.org/abs/1904.09406>.
+:::
+
+::: {#ref-Both2019TemporalFlows .csl-entry}
+Both, Gert-Jan, and Remy Kusters. 2019. "Temporal Normalizing Flows,"
+December. <http://arxiv.org/abs/1912.09092>.
+:::
+
+::: {#ref-Brunton2016DiscoveringSystems .csl-entry}
+Brunton, Steven L., Joshua L. Proctor, J. Nathan Kutz, and William
+Bialek. 2016. "[Discovering governing equations from data by sparse
+identification of nonlinear dynamical systems]{.nocase}." *Proceedings
+of the National Academy of Sciences of the United States of America* 113
+(15): 3932--37. <https://doi.org/10.1073/pnas.1517384113>.
+:::
+
+::: {#ref-Chen2018NeuralEquations .csl-entry}
+Chen, Ricky T. Q., Yulia Rubanova, Jesse Bettencourt, and David
+Duvenaud. 2018. "Neural Ordinary Differential Equations." *UNITEXT - La
+Matematica Per Il 3 Piu 2* 109 (June): 31--60.
+<http://arxiv.org/abs/1806.07366>.
+:::
+
+::: {#ref-Cranmer2019TheInference .csl-entry}
+Cranmer, Kyle, Johann Brehmer, and Gilles Louppe. 2019. "[The frontier
+of simulation-based inference]{.nocase}," November.
+<http://arxiv.org/abs/1911.01429>.
+:::
+
+::: {#ref-Cranmer2020DiscoveringBiases .csl-entry}
+Cranmer, Miles, Alvaro Sanchez-Gonzalez, Peter Battaglia, Rui Xu, Kyle
+Cranmer, David Spergel, and Shirley Ho. 2020. "[Discovering Symbolic
+Models from Deep Learning with Inductive Biases]{.nocase}," June.
+<http://arxiv.org/abs/2006.11287>.
+:::
+
+::: {#ref-Cranmer2019LearningNetworks .csl-entry}
+Cranmer, Miles, Rui Xu, Peter Battaglia, and Shirley Ho. 2019.
+"[Learning Symbolic Physics with Graph Networks]{.nocase}," no. NeurIPS.
+<http://arxiv.org/abs/1909.05862>.
+:::
+
+::: {#ref-Dinh2016DensityNVP .csl-entry}
+Dinh, Laurent, Jascha Sohl-Dickstein, and Samy Bengio. 2016. "[Density
+estimation using Real NVP]{.nocase}." *5th International Conference on
+Learning Representations, ICLR 2017 - Conference Track Proceedings*,
+May. <http://arxiv.org/abs/1605.08803>.
+:::
+
+::: {#ref-Garnelo2019ReconcilingRelations .csl-entry}
+Garnelo, Marta, and Murray Shanahan. 2019. "[Reconciling deep learning
+with symbolic artificial intelligence: representing objects and
+relations]{.nocase}." Elsevier Ltd.
+<https://doi.org/10.1016/j.cobeha.2018.12.010>.
+:::
+
+::: {#ref-Goyal2019RecurrentMechanisms .csl-entry}
+Goyal, Anirudh, Alex Lamb, Jordan Hoffmann, Shagun Sodhani, Sergey
+Levine, Yoshua Bengio, and Bernhard Schölkopf. 2019. "Recurrent
+Independent Mechanisms," September. <http://arxiv.org/abs/1909.10893>.
+:::
+
+::: {#ref-Greydanus2019HamiltonianNetworks .csl-entry}
+Greydanus, Sam, Misko Dzamba, and Jason Yosinski. 2019. "Hamiltonian
+Neural Networks," 1--15. <http://arxiv.org/abs/1906.01563>.
+:::
+
+::: {#ref-Hendrycks2019BenchmarkingPerturbations .csl-entry}
+Hendrycks, Dan, and Thomas Dietterich. 2019. "[Benchmarking Neural
+Network Robustness to Common Corruptions and Perturbations]{.nocase}."
+*arXiv*, March. <http://arxiv.org/abs/1903.12261>.
+:::
+
+::: {#ref-Higgins2018TowardsRepresentations .csl-entry}
+Higgins, Irina, David Amos, David Pfau, Sebastien Racaniere, Loic
+Matthey, Danilo Rezende, and Alexander Lerchner. 2018. "[Towards a
+Definition of Disentangled Representations]{.nocase}," December.
+<http://arxiv.org/abs/1812.02230>.
+:::
+
+::: {#ref-Lample2017FaderAttributes .csl-entry}
+Lample, Guillaume, Neil Zeghidour, Nicolas Usunier, Antoine Bordes,
+Ludovic Denoyer, and Marc'aurelio Ranzato. 2017. "[Fader networks:
+Manipulating images by sliding attributes]{.nocase}." *Advances in
+Neural Information Processing Systems* 2017-Decem (Nips): 5968--77.
+:::
+
+::: {#ref-LeGuen2020DisentanglingPrediction .csl-entry}
+Le Guen, Vincent, and Nicolas Thome. 2020. "[Disentangling Physical
+Dynamics from Unknown Factors for Unsupervised Video
+Prediction]{.nocase}."
+:::
+
+::: {#ref-Lin2017WhyWell .csl-entry}
+Lin, Henry W., Max Tegmark, and David Rolnick. 2017. "[Why Does Deep and
+Cheap Learning Work So Well?]{.nocase}" *Journal of Statistical Physics*
+168 (6): 1223--47. <https://doi.org/10.1007/s10955-017-1836-5>.
+:::
+
+::: {#ref-Linial2020GenerativeUnknowns .csl-entry}
+Linial, Ori, Danny Eytan, and Uri Shalit. 2020. "[Generative ODE
+Modeling with Known Unknowns]{.nocase}," March.
+<http://arxiv.org/abs/2003.10775>.
+:::
+
+::: {#ref-Locatello2018ChallengingRepresentations .csl-entry}
+Locatello, Francesco, Stefan Bauer, Mario Lucic, Gunnar Rätsch, Sylvain
+Gelly, Bernhard Schölkopf, and Olivier Bachem. 2018. "[Challenging
+Common Assumptions in the Unsupervised Learning of Disentangled
+Representations]{.nocase}." *36th International Conference on Machine
+Learning, ICML 2019* 2019-June (November): 7247--83.
+<http://arxiv.org/abs/1811.12359>.
+:::
+
+::: {#ref-Locatello2019DisentanglingLabels .csl-entry}
+Locatello, Francesco, Michael Tschannen, Stefan Bauer, Gunnar Rätsch,
+Bernhard Schölkopf, and Olivier Bachem. 2019. "[Disentangling Factors of
+Variation Using Few Labels]{.nocase}," May.
+<http://arxiv.org/abs/1905.01258>.
+:::
+
+::: {#ref-Lu2019UnderstandingView .csl-entry}
+Lu, Yiping, Zhuohan Li, Di He, Zhiqing Sun, Bin Dong, Tao Qin, Liwei
+Wang, and Tie-Yan Liu. 2019. "[Understanding and Improving Transformer
+From a Multi-Particle Dynamic System Point of View]{.nocase}," no.
+NeurIPS: 1--10. <http://arxiv.org/abs/1906.02762>.
+:::
+
+::: {#ref-Miladinovic2019DisentangledRepresentations .csl-entry}
+Miladinović, Đorđe, Muhammad Waleed Gondal, Bernhard Schölkopf, Joachim
+M. Buhmann, and Stefan Bauer. 2019. "Disentangled State Space
+Representations," June. <http://arxiv.org/abs/1906.03255>.
+:::
+
+::: {#ref-Mooij2013FromCase .csl-entry}
+Mooij, Joris M., Dominik Janzing, and Bernhard Schölkopf. 2013. "[From
+Ordinary Differential Equations to Structural Causal Models: the
+deterministic case]{.nocase}." *Uncertainty in Artificial Intelligence -
+Proceedings of the 29th Conference, UAI 2013*, April, 440--48.
+<http://arxiv.org/abs/1304.7920>.
+:::
+
+::: {#ref-Raissi2019Physics-informedEquations .csl-entry}
+Raissi, Maziar, P. Perdikaris, and G. E. Karniadakis. 2019.
+"[Physics-informed neural networks: A deep learning framework for
+solving forward and inverse problems involving nonlinear partial
+differential equations]{.nocase}." *Journal of Computational Physics*
+378 (February): 686--707. <https://doi.org/10.1016/j.jcp.2018.10.045>.
+:::
+
+::: {#ref-Rezende2015VariationalFlows .csl-entry}
+Rezende, Danilo Jimenez, and Shakir Mohamed. 2015. "[Variational
+Inference with Normalizing Flows]{.nocase}." *32nd International
+Conference on Machine Learning, ICML 2015* 2 (May): 1530--38.
+<http://arxiv.org/abs/1505.05770>.
+:::
+
+::: {#ref-Rezende2019EquivariantFlows .csl-entry}
+Rezende, Danilo Jimenez, Sébastien Racanière, Irina Higgins, and Peter
+Toth. 2019. "Equivariant Hamiltonian Flows."
+<http://arxiv.org/abs/1909.13739>.
+:::
+
+::: {#ref-Ruthotto2019DeepEquations .csl-entry}
+Ruthotto, Lars, and Eldad Haber. 2019. "[Deep Neural Networks Motivated
+by Partial Differential Equations]{.nocase}." *Journal of Mathematical
+Imaging and Vision*, 2--10.
+<https://doi.org/10.1007/s10851-019-00903-1>.
+:::
+
+::: {#ref-Saemundsson2019VariationalEmbeddings .csl-entry}
+Saemundsson, Steindor, Alexander Terenin, Katja Hofmann, and Marc Peter
+Deisenroth. 2019. "[Variational Integrator Networks for Physically
+Structured Embeddings]{.nocase}," October.
+<http://arxiv.org/abs/1910.09349>.
+:::
+
+::: {#ref-Sanchez-Gonzalez2019HamiltonianIntegrators .csl-entry}
+Sanchez-Gonzalez, Alvaro, Victor Bapst, Kyle Cranmer, and Peter
+Battaglia. 2019. "[Hamiltonian Graph Networks with ODE
+Integrators]{.nocase}," September. <http://arxiv.org/abs/1909.12790>.
+:::
+
+::: {#ref-Sanchez-Gonzalez2018GraphControl .csl-entry}
+Sanchez-Gonzalez, Alvaro, Nicolas Heess, Jost Tobias Springenberg, Josh
+Merel, Martin Riedmiller, Raia Hadsell, and Peter Battaglia. 2018.
+"[Graph networks as learnable physics engines for inference and
+control]{.nocase}," June. <http://arxiv.org/abs/1806.01242>.
+:::
+
+::: {#ref-Scholkopf2019CausalityLearning .csl-entry}
+Schölkopf, Bernhard. 2019. "[Causality for Machine Learning]{.nocase},"
+November. <http://arxiv.org/abs/1911.10500>.
+:::
+
+::: {#ref-Shanahan2019AnArchitecture .csl-entry}
+Shanahan, Murray, Kyriacos Nikiforou, Antonia Creswell, Christos
+Kaplanis, David Barrett, and Marta Garnelo. 2019. "An Explicitly
+Relational Neural Network Architecture," May.
+<http://arxiv.org/abs/1905.10307>.
+:::
+
+::: {#ref-Sun2019Test-TimeShifts .csl-entry}
+Sun, Yu, Xiaolong Wang, Zhuang Liu, John Miller, Alexei A. Efros, and
+Moritz Hardt. 2019. "[Test-Time Training with Self-Supervision for
+Generalization under Distribution Shifts]{.nocase}," September.
+<http://arxiv.org/abs/1909.13231>.
+:::
+
+::: {#ref-Toth2019 .csl-entry}
+Toth, Peter, Danilo Jimenez Rezende, Andrew Jaegle, Sébastien Racanière,
+Aleksandar Botev, and Irina Higgins. 2019. "Hamiltonian Generative
+Networks," 1--17. <http://arxiv.org/abs/1909.13789>.
+:::
+
+::: {#ref-VanSteenkiste2019AreReasoning .csl-entry}
+Van Steenkiste, Sjoerd, Francesco Locatello, Jürgen Schmidhuber, and
+Olivier Bachem. 2019. "[Are Disentangled Representations Helpful for
+Abstract Visual Reasoning?]{.nocase}"
+:::
+
+::: {#ref-Vaswani2017AttentionNeed .csl-entry}
+Vaswani, Ashish, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion
+Jones, Aidan N. Gomez, Łukasz Kaiser, and Illia Polosukhin. 2017.
+"[Attention is all you need]{.nocase}." In *Advances in Neural
+Information Processing Systems*, 2017-Decem:5999--6009. Neural
+information processing systems foundation.
+:::
+
+::: {#ref-Yldz2019ODE2VAE:Networks .csl-entry}
+Yıldız, Çağatay, Markus Heinonen, and Harri Lähdesmäki. 2019.
+"[ODE\^2VAE: Deep generative second order ODEs with Bayesian neural
+networks]{.nocase}," May. <http://arxiv.org/abs/1905.10994>.
+:::
+:::
